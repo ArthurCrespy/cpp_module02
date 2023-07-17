@@ -21,7 +21,7 @@ class Fixed
 {
 	private:
 		int					_value;
-		static const int	_bits = 8;
+		static const int	_bits = 8 * 3;
 	public:
 		Fixed();
 		Fixed(const int value);
@@ -58,8 +58,6 @@ class Fixed
 		static Fixed	    &max(Fixed &a, Fixed &b);
 		static const Fixed	&min(const Fixed &a, const Fixed &b);
 		static const Fixed	&max(const Fixed &a, const Fixed &b);
-
-
 };
 
 #endif
