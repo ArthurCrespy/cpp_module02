@@ -23,15 +23,15 @@ class Point
 	public:
 		Point();
 		Point(const float x, const float y);
+		Point(const Fixed x, const Fixed y);
 		Point(const Point &point);
 		Point &operator=(const Point &point);
 		~Point();
 
 		Fixed const &getX(void) const;
 		Fixed const &getY(void) const;
-
-		bool bsp(Point const a, Point const b, Point const c, Point const point);
-
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
