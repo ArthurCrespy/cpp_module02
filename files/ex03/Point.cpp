@@ -27,7 +27,6 @@ Point& Point::operator=(const Point &src)
 	return (*this);
 }
 
-
 Point::~Point() {}
 
 Fixed const &Point::getX(void) const

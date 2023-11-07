@@ -24,7 +24,6 @@ int main(void)
 	Point P6 = P;                           // Assignation operator used
 	Point P7(Fixed(-0.5f), Fixed(-0.5f));
 
-	//2.56 ; 2.08 part of the vertex
 	Point Tc(0, 0);
 	Point Ta(5.12, 4.16);
 	Point Tb(1.18, -6.49);
