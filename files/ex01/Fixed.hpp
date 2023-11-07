@@ -22,6 +22,7 @@ class Fixed
 	private:
 		int					_value;
 		static const int	_bits = 8;
+
 	public:
 		Fixed();
 		Fixed(const int value);
