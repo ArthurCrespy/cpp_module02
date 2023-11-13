@@ -1,0 +1,5 @@
+sachant que area = (x1(y2-y3) + x2(y3-y1) + x3(y1-y2)) / 2
+pour verifier si un point est dans le triangle ABC
+on calcule les aires des triangles ABC, PBC, APC et ABP ou P est le point donne
+si la somme des aires des triangles PBC, APC et ABP est egale a l'aire du triangle ABC alors le point est dans le triangle ABC
+aussi si la difference entre les aires est inferieure a 0.0001f le resultat est considere comme positif
