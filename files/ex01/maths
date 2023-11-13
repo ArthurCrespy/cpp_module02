@@ -1,0 +1,21 @@
+chaque bit de la partie fractionnaire représente une puissance négative de 2
+donc pour 8 bits, 2^(-8) = 1/256 qui correspond à la precision
+alors 42.42 * 256 ≈ 10860 et 10860 / 256 = 42.421875
+
+-- Vfixe à Vfloat --
+pour nb Vfloat, x Vfixe avec n bits réservés pour la partie fractionnaire,
+alors nb = x * 2^n * 2^(-n)
+soit  nb = x * 2^(n-n)
+donc roundf(value * (1 << this->_bits)) effectue une multiplication de la
+Vfloat par 2^(_bits) ce qui revient à décaler la virgule de _bits positions vers la gauche,
+puis roundf arrondit le résultat à l'entier le plus proche
+
+
+-- Vfloat à Vfixe --
+pour nb Vfloat, x Vfixe avec n bits réservés pour la partie fractionnaire,
+alors x = nb * 2^(-n) * 2^n
+soit  x = nb * 2^(-n+n)
+donc (float)this->_value / (1 << this->_bits) effectue une division de la
+Vfixe par 2^(_bits) ce qui revient à décaler la virgule de _bits positions vers la droite,
+puis (float) convertit le résultat en virgule flottante
+
